@@ -35,6 +35,10 @@ echo "Building C source..."
 make -C ./src
 
 echo "Adding path to profile..."
-echo "export imupath='`pwd`/src/build/imu/imu.so'" >> ~/.bashrc
+path=`pwd`/src/build/imu/imu.so
+echo "export imupath='$path'" >> ~/.bashrc
 
-echo "Done! Run 'rvmsudo ruby web.rb' inside the web dir to start server."
+echo "Done!"
+echo "Run the command:" 
+echo "    'rvmsudo imupath='$path' ruby web.rb'"
+echo "from within ./web directory to start the server."
