@@ -4,3 +4,6 @@
 [submodule "hw"]
 	path = hw
 	url = https://github.com/LawrenceJones/gyro-circuit.git
+[submodule "web"]
+	path = web
+	url = https://github.com/fleurette/Virtual-Gyroscope.git
