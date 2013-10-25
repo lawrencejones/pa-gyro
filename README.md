@@ -1,5 +1,15 @@
 # Inertial Measurement Unit
 
+Once cloned, run the command `git submodule update --init --recursive`
+to download the files, or alternatively run the `./configure` script
+which will initiate the repositories and compile all the relevant
+resources.
+
+Once all dependencies are installed (from the `./configure` script)
+the server may be started with the command `rvmsudo imupath={path} ruby web.rb`
+from within the `./web` directory, where path is the location of
+the `imu.so` binary, produced within the `src/build/imu` path.
+
 ## Project Summary
 
 The aim of this project was to create a prototype board to trial
