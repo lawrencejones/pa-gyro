@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd devs && mkdir mpu itg pca && cd ..
+
+echo "Downloading MPU..."
+wget http://www.invensense.com/mems/gyro/documents/PS-MPU-3300-00.pdf -o devs/mpu/mpu_ps.pdf
+wget http://www.invensense.com/mems/gyro/documents/RM-MPU-3300.pdf -o devs/mpu/mpu_rm.pdf
+
+echo "Downloading ITG..."
+wget http://www.invensense.com/mems/gyro/documents/PS-ITG-3050.pdf -o devs/itg/itg_ps.pdf
+wget http://www.invensense.com/mems/gyro/documents/RM-ITG-3050.pdf -o devs/itg/itg_rm.pdf
+
+echo "Downloading PCA..."
+wget http://www.ti.com/lit/ds/symlink/pca9546a.pdf -o devs/pca/pca.pdf
