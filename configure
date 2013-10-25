@@ -22,7 +22,7 @@ echo "Installing Ruby bundler..."
 gem install bundler
 
 echo "Initialising git submodules..."
-git submodule init && git submodule update
+git submodule update --init --recursive
 
 echo "Running bundle for gems. May take up to 2 hours..."
 cd ./web && bundle
