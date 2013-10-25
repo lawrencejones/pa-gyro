@@ -1,0 +1,37 @@
+#!/bin/sh
+
+echo "Updating system..."
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+
+echo "Installing system packages..."
+sudo apt-get -y install curl wget git-core gcc vim
+
+echo "Installing ruby dependencies..."
+sudo apt-get install -y openssl libreadline6-dev git-core zlib1g libssl-dev
+sudo apt-get install -y libyaml-dev libsqlite3-dev sqlite3
+sudo apt-get install -y libxml2-dev libxslt-dev
+sudo apt-get install -y autoconf automake libtool bison
+sudo apt-get install -y rubygems build-essential
+
+echo "Installing RVM and Ruby..."
+curl -L https://get.rvm.io | bash -s stable --ruby
+
+echo "Installing Ruby bundler..."
+gem install bundler
+
+echo "Initialising git submodules..."
+git submodule init && git submodule update
+
+echo "Running bundle for gems. May take up to 2 hours..."
+cd ./web && bundle
+cd ..
+
+echo "Fetching gsl. May take up to 45 minutes..."
+make -C ./src gsl
+
+echo "Building C source..."
+make -C ./src
+
+echo "Done! Run 'ruby web.rb' inside the web dir to start server."
