@@ -34,4 +34,4 @@ make -C ./src gsl
 echo "Building C source..."
 make -C ./src
 
-echo "Done! Run 'ruby web.rb' inside the web dir to start server."
+echo "Done! Run 'rvmsudo ruby web.rb' inside the web dir to start server."
