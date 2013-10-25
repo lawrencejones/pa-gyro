@@ -20,13 +20,13 @@ performs dsp on the raw data.
 The implementation can be broken down into the following steps,
 completion indicated by a tick.
 
-[X] Research suitable components
-[X] Design circuit board to host chosen sensors
-[X] Fabricate board and assemble
-[X] Implement drivers for board/individual sensors
-[X] Implement digital signal processing
-[ ] Implement link between driver data and dsp
-[ ] Implement web gui for data analysis
+- [X] Research suitable components
+- [X] Design circuit board to host chosen sensors
+- [X] Fabricate board and assemble
+- [X] Implement drivers for board/individual sensors
+- [X] Implement digital signal processing
+- [ ] Implement link between driver data and dsp
+- [ ] Implement web gui for data analysis
 
 Below is a breakdown of each stage of the project, what files are
 related to which section and what still needs to be done.
