@@ -52,7 +52,7 @@ the initial question about IMU potential.
 
 ## 2. Design Circuit Board and Assemble
 
-Located in the circuit submodule are the Eagle CAD files for the
+Located in the hw submodule are the Eagle CAD files for the
 production of the circuit. PCBTrain we're used in the production
 of the circuit and for future use I'll outline the procedure below.
 
